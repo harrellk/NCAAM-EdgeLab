@@ -1,0 +1,19 @@
+# Python caches
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Data files (too large to version control)
+data/raw/
+data/processed/
+output/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+*.code-workspace
