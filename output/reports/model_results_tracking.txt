@@ -1,0 +1,1 @@
+Date,HomeTeam,AwayTeam,HomeModelSpread,AwayModelSpread,ModelTotal,HomeMarketSpread,AwayMarketSpread,MarketTotal,ActualHomeScore,ActualAwayScore,ActualMargin,ActualTotal,ModelMargin,ModelTotalError,SpreadResidualTotal,SpreadResidualHome,SpreadResidualAway,TotalResidual

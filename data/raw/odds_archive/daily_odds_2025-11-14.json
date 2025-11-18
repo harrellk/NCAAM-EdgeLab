@@ -1,0 +1,2364 @@
+[
+  {
+    "id": "ef3972b9d28e04dd11342475593c9d1f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-14T23:30:00Z",
+    "home_team": "Lindenwood Lions",
+    "away_team": "Charleston Southern Buccaneers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Charleston Southern Buccaneers",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Lindenwood Lions",
+                "price": -115,
+                "point": -3.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 156.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 156.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1a30506073314e98c9d3ec37b18818ae",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-14T23:30:00Z",
+    "home_team": "Eastern Michigan Eagles",
+    "away_team": "IUPUI Jaguars",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Eastern Michigan Eagles",
+                "price": -112,
+                "point": -4.5
+              },
+              {
+                "name": "IUPUI Jaguars",
+                "price": -108,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -115,
+                "point": 186.5
+              },
+              {
+                "name": "Under",
+                "price": -105,
+                "point": 186.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4a975523ace52d53c3de9933e5fd83ac",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-14T23:30:00Z",
+    "home_team": "Rutgers Scarlet Knights",
+    "away_team": "Lehigh Mountain Hawks",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Lehigh Mountain Hawks",
+                "price": -112,
+                "point": 17.5
+              },
+              {
+                "name": "Rutgers Scarlet Knights",
+                "price": -108,
+                "point": -17.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -115,
+                "point": 136.5
+              },
+              {
+                "name": "Under",
+                "price": -105,
+                "point": 136.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "b32d17270d0b91e10241030c2d627651",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:00:00Z",
+    "home_team": "Rhode Island Rams",
+    "away_team": "Albany Great Danes",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Albany Great Danes",
+                "price": -115,
+                "point": 15.5
+              },
+              {
+                "name": "Rhode Island Rams",
+                "price": -105,
+                "point": -15.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -108,
+                "point": 151.5
+              },
+              {
+                "name": "Under",
+                "price": -112,
+                "point": 151.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "f97e48b08d1831fe7af5b3f3c24a941b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:00:00Z",
+    "home_team": "Bucknell Bison",
+    "away_team": "Hofstra Pride",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Bucknell Bison",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Hofstra Pride",
+                "price": -115,
+                "point": -3.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -115,
+                "point": 139.5
+              },
+              {
+                "name": "Under",
+                "price": -105,
+                "point": 139.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "f4ee0461d554d7f22c5a6b9a83931c73",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:00:00Z",
+    "home_team": "Charleston Cougars",
+    "away_team": "South Carolina St Bulldogs",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Charleston Cougars",
+                "price": -108,
+                "point": -18.5
+              },
+              {
+                "name": "South Carolina St Bulldogs",
+                "price": -112,
+                "point": 18.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -115,
+                "point": 155.5
+              },
+              {
+                "name": "Under",
+                "price": -105,
+                "point": 155.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "36c3fd814d6565199948362615736ea4",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:00:00Z",
+    "home_team": "Jacksonville St Gamecocks",
+    "away_team": "Coastal Carolina Chanticleers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Coastal Carolina Chanticleers",
+                "price": -105,
+                "point": 7.5
+              },
+              {
+                "name": "Jacksonville St Gamecocks",
+                "price": -115,
+                "point": -7.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -108,
+                "point": 138.5
+              },
+              {
+                "name": "Under",
+                "price": -112,
+                "point": 138.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2203169ff4a51970829e4ab709707d8f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:00:00Z",
+    "home_team": "Duke Blue Devils",
+    "away_team": "Indiana St Sycamores",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Duke Blue Devils",
+                "price": -115,
+                "point": -38.5
+              },
+              {
+                "name": "Indiana St Sycamores",
+                "price": -105,
+                "point": 38.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 163.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 163.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "0bdd147104e86e50a3b39146dfdbef74",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:00:00Z",
+    "home_team": "Kentucky Wildcats",
+    "away_team": "Eastern Illinois Panthers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Eastern Illinois Panthers",
+                "price": -110,
+                "point": 36.5
+              },
+              {
+                "name": "Kentucky Wildcats",
+                "price": -110,
+                "point": -36.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 147.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 147.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3c66dafb57a6d923df0376ffdce21778",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:00:00Z",
+    "home_team": "Fairfield Stags",
+    "away_team": "Stonehill Skyhawks",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Fairfield Stags",
+                "price": -115,
+                "point": -6.5
+              },
+              {
+                "name": "Stonehill Skyhawks",
+                "price": -105,
+                "point": 6.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 144.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 144.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "d6497d18b189addaaea01350456a471a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:00:00Z",
+    "home_team": "Iona Gaels",
+    "away_team": "Fordham Rams",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Fordham Rams",
+                "price": -115,
+                "point": 5.5
+              },
+              {
+                "name": "Iona Gaels",
+                "price": -105,
+                "point": -5.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -105,
+                "point": 156.5
+              },
+              {
+                "name": "Under",
+                "price": -115,
+                "point": 156.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3cfca306e866005ed6b7cb0ff6d81c18",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:00:00Z",
+    "home_team": "McNeese Cowboys",
+    "away_team": "Louisiana Ragin' Cajuns",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Louisiana Ragin' Cajuns",
+                "price": -110,
+                "point": 15.5
+              },
+              {
+                "name": "McNeese Cowboys",
+                "price": -110,
+                "point": -15.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -105,
+                "point": 134.5
+              },
+              {
+                "name": "Under",
+                "price": -115,
+                "point": 134.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "85b3d6c684d8c28fb5677beecff5cac5",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:00:00Z",
+    "home_team": "Towson Tigers",
+    "away_team": "Norfolk St Spartans",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Norfolk St Spartans",
+                "price": -112,
+                "point": 13.5
+              },
+              {
+                "name": "Towson Tigers",
+                "price": -108,
+                "point": -13.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -105,
+                "point": 138.5
+              },
+              {
+                "name": "Under",
+                "price": -115,
+                "point": 138.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "d67694aad6209ea13707b4dbe85b6f11",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:00:00Z",
+    "home_team": "West Georgia Wolves",
+    "away_team": "The Citadel Bulldogs",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "The Citadel Bulldogs",
+                "price": -105,
+                "point": 6.5
+              },
+              {
+                "name": "West Georgia Wolves",
+                "price": -115,
+                "point": -6.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -105,
+                "point": 150.5
+              },
+              {
+                "name": "Under",
+                "price": -115,
+                "point": 150.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "767833ba8161a13cec10c0a4ff5ea937",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:00:12Z",
+    "home_team": "Northern Iowa Panthers",
+    "away_team": "Furman Paladins",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Furman Paladins",
+                "price": -112,
+                "point": 9.5
+              },
+              {
+                "name": "Northern Iowa Panthers",
+                "price": -108,
+                "point": -9.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 141.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 141.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "205134a850d83d9f2d8adb9683d1b703",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:30:00Z",
+    "home_team": "Ole Miss Rebels",
+    "away_team": "CSU Bakersfield Roadrunners",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "CSU Bakersfield Roadrunners",
+                "price": -115,
+                "point": 23.5
+              },
+              {
+                "name": "Ole Miss Rebels",
+                "price": -105,
+                "point": -23.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -105,
+                "point": 140.5
+              },
+              {
+                "name": "Under",
+                "price": -115,
+                "point": 140.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c7f0bde204e76aca53717f276c818255",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:30:00Z",
+    "home_team": "Drake Bulldogs",
+    "away_team": "SIU-Edwardsville Cougars",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Drake Bulldogs",
+                "price": -118,
+                "point": -6.5
+              },
+              {
+                "name": "SIU-Edwardsville Cougars",
+                "price": -102,
+                "point": 6.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 142.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 142.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9a78ff271734f93551602ae855d197ec",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:30:00Z",
+    "home_team": "UAB Blazers",
+    "away_team": "High Point Panthers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "High Point Panthers",
+                "price": -112,
+                "point": -1.5
+              },
+              {
+                "name": "UAB Blazers",
+                "price": -108,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 168.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 168.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "635d417fbe4be467fbcaebe114c7dfb0",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:30:00Z",
+    "home_team": "USC Trojans",
+    "away_team": "Illinois St Redbirds",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Illinois St Redbirds",
+                "price": -105,
+                "point": 15.5
+              },
+              {
+                "name": "USC Trojans",
+                "price": -115,
+                "point": -15.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 155.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 155.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1df632fd747b044023ea9c6d4539f6a6",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T00:30:00Z",
+    "home_team": "Tulane Green Wave",
+    "away_team": "New Orleans Privateers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "New Orleans Privateers",
+                "price": -105,
+                "point": 12.5
+              },
+              {
+                "name": "Tulane Green Wave",
+                "price": -115,
+                "point": -12.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -105,
+                "point": 154.5
+              },
+              {
+                "name": "Under",
+                "price": -115,
+                "point": 154.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c11302fed18386b83bdc0491c7ce6a2f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T01:00:00Z",
+    "home_team": "Arkansas Razorbacks",
+    "away_team": "Samford Bulldogs",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Arkansas Razorbacks",
+                "price": -105,
+                "point": -25.5
+              },
+              {
+                "name": "Samford Bulldogs",
+                "price": -115,
+                "point": 25.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 158.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 158.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2915c3d5ee87ff22deac6d4127cd7a4c",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T01:00:00Z",
+    "home_team": "Creighton Bluejays",
+    "away_team": "Maryland-Eastern Shore Hawks",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Creighton Bluejays",
+                "price": -108,
+                "point": -33.5
+              },
+              {
+                "name": "Maryland-Eastern Shore Hawks",
+                "price": -112,
+                "point": 33.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -108,
+                "point": 135.5
+              },
+              {
+                "name": "Under",
+                "price": -112,
+                "point": 135.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ac6d7ac61334cf4af27859bddb368fdb",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T01:00:00Z",
+    "home_team": "Rice Owls",
+    "away_team": "East Texas A&M Lions",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "East Texas A&M Lions",
+                "price": -115,
+                "point": 10.5
+              },
+              {
+                "name": "Rice Owls",
+                "price": -105,
+                "point": -10.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -105,
+                "point": 147.5
+              },
+              {
+                "name": "Under",
+                "price": -115,
+                "point": 147.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "46416aa8190635c0f43ef696ee02f607",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T01:00:00Z",
+    "home_team": "Texas Tech Red Raiders",
+    "away_team": "Milwaukee Panthers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Milwaukee Panthers",
+                "price": -105,
+                "point": 27.5
+              },
+              {
+                "name": "Texas Tech Red Raiders",
+                "price": -115,
+                "point": -27.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 165.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 165.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ca0a4e03bb2dddcc0cdee0dfa0c093ba",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T01:00:00Z",
+    "home_team": "Texas A&M Aggies",
+    "away_team": "UCF Knights",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Texas A&M Aggies",
+                "price": -102,
+                "point": -10.5
+              },
+              {
+                "name": "UCF Knights",
+                "price": -118,
+                "point": 10.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -105,
+                "point": 172.5
+              },
+              {
+                "name": "Under",
+                "price": -115,
+                "point": 172.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1adbd0d0bc41165eaacb74c30117c9d9",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T01:00:01Z",
+    "home_team": "Iowa Hawkeyes",
+    "away_team": "Xavier Musketeers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Iowa Hawkeyes",
+                "price": -115,
+                "point": -15.5
+              },
+              {
+                "name": "Xavier Musketeers",
+                "price": -105,
+                "point": 15.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -112,
+                "point": 142.5
+              },
+              {
+                "name": "Under",
+                "price": -108,
+                "point": 142.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "099398fd9aa916a014795676176a5edc",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T01:15:00Z",
+    "home_team": "Brown Bears",
+    "away_team": "Hampton Pirates",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Brown Bears",
+                "price": -105,
+                "point": -1.5
+              },
+              {
+                "name": "Hampton Pirates",
+                "price": -115,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -112,
+                "point": 141.5
+              },
+              {
+                "name": "Under",
+                "price": -108,
+                "point": 141.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6897c65f74a15d26a156d7069b3b5102",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T01:30:00Z",
+    "home_team": "DePaul Blue Demons",
+    "away_team": "Northwestern Wildcats",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "DePaul Blue Demons",
+                "price": -108,
+                "point": 4.5
+              },
+              {
+                "name": "Northwestern Wildcats",
+                "price": -112,
+                "point": -4.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 143.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 143.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "496a6930a5b8d182accf2b0ecf375798",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T02:00:00Z",
+    "home_team": "Stephen F. Austin Lumberjacks",
+    "away_team": "Abilene Christian Wildcats",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Abilene Christian Wildcats",
+                "price": -108,
+                "point": 6.5
+              },
+              {
+                "name": "Stephen F. Austin Lumberjacks",
+                "price": -112,
+                "point": -6.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 142.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 142.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fee35be135837664ca89eb94a34c51d5",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T02:00:00Z",
+    "home_team": "Baylor Bears",
+    "away_team": "Tarleton State Texans",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Baylor Bears",
+                "price": -108,
+                "point": -24.5
+              },
+              {
+                "name": "Tarleton State Texans",
+                "price": -112,
+                "point": 24.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -108,
+                "point": 152.5
+              },
+              {
+                "name": "Under",
+                "price": -112,
+                "point": 152.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "0e35dfe8f93ce2400bb88c7ebe46462b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T02:00:00Z",
+    "home_team": "Montana Grizzlies",
+    "away_team": "Cal Poly Mustangs",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Cal Poly Mustangs",
+                "price": -105,
+                "point": 7.5
+              },
+              {
+                "name": "Montana Grizzlies",
+                "price": -115,
+                "point": -7.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 169.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 169.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "e612c86fb76891aad47d549669547b3d",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T02:00:00Z",
+    "home_team": "Illinois Fighting Illini",
+    "away_team": "Colgate Raiders",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Colgate Raiders",
+                "price": -105,
+                "point": 30.5
+              },
+              {
+                "name": "Illinois Fighting Illini",
+                "price": -115,
+                "point": -30.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -105,
+                "point": 164.5
+              },
+              {
+                "name": "Under",
+                "price": -115,
+                "point": 164.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a95b2249096f2d166ad786a48f15038e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T02:00:00Z",
+    "home_team": "Colorado Buffaloes",
+    "away_team": "Providence Friars",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Colorado Buffaloes",
+                "price": -110,
+                "point": -1.5
+              },
+              {
+                "name": "Providence Friars",
+                "price": -110,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -115,
+                "point": 163.5
+              },
+              {
+                "name": "Under",
+                "price": -105,
+                "point": 163.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "88207e99c4fec21520d28f0df856166d",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T02:00:00Z",
+    "home_team": "Georgia Bulldogs",
+    "away_team": "Georgia Tech Yellow Jackets",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Georgia Bulldogs",
+                "price": -108,
+                "point": -15.5
+              },
+              {
+                "name": "Georgia Tech Yellow Jackets",
+                "price": -112,
+                "point": 15.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 154.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 154.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dc77330d31ef4f6caddde01aaba2b277",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T02:00:00Z",
+    "home_team": "TCU Horned Frogs",
+    "away_team": "Michigan Wolverines",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Michigan Wolverines",
+                "price": -108,
+                "point": -7.5
+              },
+              {
+                "name": "TCU Horned Frogs",
+                "price": -112,
+                "point": 7.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -115,
+                "point": 161.5
+              },
+              {
+                "name": "Under",
+                "price": -105,
+                "point": 161.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "118de5449941e42290b8e92313fa77f8",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T02:00:00Z",
+    "home_team": "North Carolina Tar Heels",
+    "away_team": "North Carolina Central Eagles",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "North Carolina Central Eagles",
+                "price": -110,
+                "point": 34.5
+              },
+              {
+                "name": "North Carolina Tar Heels",
+                "price": -110,
+                "point": -34.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -115,
+                "point": 159.5
+              },
+              {
+                "name": "Under",
+                "price": -105,
+                "point": 159.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5568bcbdbfdc85b32379eecf21883a43",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T02:00:00Z",
+    "home_team": "UC Davis Aggies",
+    "away_team": "Sacramento St Hornets",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Sacramento St Hornets",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "UC Davis Aggies",
+                "price": -115,
+                "point": -4.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 151.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 151.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "39f32c0e3fce15ab75666aaf6e9e46ff",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T02:30:00Z",
+    "home_team": "Utah Tech Trailblazers",
+    "away_team": "Miss Valley St Delta Devils",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Miss Valley St Delta Devils",
+                "price": -108,
+                "point": 26.5
+              },
+              {
+                "name": "Utah Tech Trailblazers",
+                "price": -112,
+                "point": -26.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 145.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 145.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "e592ec91ec346cb5176813fc5543b20f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T03:00:00Z",
+    "home_team": "UCLA Bruins",
+    "away_team": "Arizona Wildcats",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Arizona Wildcats",
+                "price": -102,
+                "point": -1.5
+              },
+              {
+                "name": "UCLA Bruins",
+                "price": -118,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -105,
+                "point": 155.5
+              },
+              {
+                "name": "Under",
+                "price": -115,
+                "point": 155.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "12e8bd70e240752845f92700f318b999",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T03:00:00Z",
+    "home_team": "Loyola Marymount Lions",
+    "away_team": "Troy Trojans",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Loyola Marymount Lions",
+                "price": -112,
+                "point": -3.5
+              },
+              {
+                "name": "Troy Trojans",
+                "price": -108,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 139.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 139.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deea5b571f5f2ff642bcbfee4cb1d9f6",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T03:00:00Z",
+    "home_team": "Saint Mary's Gaels",
+    "away_team": "North Texas Mean Green",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "North Texas Mean Green",
+                "price": -118,
+                "point": 15.5
+              },
+              {
+                "name": "Saint Mary's Gaels",
+                "price": -102,
+                "point": -15.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -112,
+                "point": 129.5
+              },
+              {
+                "name": "Under",
+                "price": -108,
+                "point": 129.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9ab9f4feafd79625ce6a444e27d5641f",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T03:30:00Z",
+    "home_team": "Cal Baptist Lancers",
+    "away_team": "Western Illinois Leathernecks",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Cal Baptist Lancers",
+                "price": -102,
+                "point": -15.5
+              },
+              {
+                "name": "Western Illinois Leathernecks",
+                "price": -118,
+                "point": 15.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -112,
+                "point": 139.5
+              },
+              {
+                "name": "Under",
+                "price": -108,
+                "point": 139.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "39165fc90842ecd766a500c7ecb7cd85",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T04:00:00Z",
+    "home_team": "Arizona St Sun Devils",
+    "away_team": "Gonzaga Bulldogs",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Arizona St Sun Devils",
+                "price": -105,
+                "point": 13.5
+              },
+              {
+                "name": "Gonzaga Bulldogs",
+                "price": -115,
+                "point": -13.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 159.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 159.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9145250bd61d5b377c14177d29a62622",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T04:00:00Z",
+    "home_team": "Washington St Cougars",
+    "away_team": "Washington Huskies",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Washington Huskies",
+                "price": -110,
+                "point": -8.5
+              },
+              {
+                "name": "Washington St Cougars",
+                "price": -110,
+                "point": 8.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 158.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 158.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "65ab0c40570bc45640aeff69e13a7e15",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T05:00:00Z",
+    "home_team": "Hawai'i Rainbow Warriors",
+    "away_team": "Manhattan Jaspers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Hawai'i Rainbow Warriors",
+                "price": -115,
+                "point": -15.5
+              },
+              {
+                "name": "Manhattan Jaspers",
+                "price": -105,
+                "point": 15.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 156.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 156.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "012ebd70ff82139a83b970ec69904be9",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T17:00:00Z",
+    "home_team": "Georgetown Hoyas",
+    "away_team": "Clemson Tigers",
+    "bookmakers": []
+  },
+  {
+    "id": "78c491e6032b017351d37d7e846bcd6a",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T17:00:00Z",
+    "home_team": "Louisville Cardinals",
+    "away_team": "Ohio Bobcats",
+    "bookmakers": []
+  },
+  {
+    "id": "7673964fc4cdcb1e9fd76c51a3c9e424",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T17:00:00Z",
+    "home_team": "Virginia Cavaliers",
+    "away_team": "Marshall Thundering Herd",
+    "bookmakers": []
+  },
+  {
+    "id": "8620f0a7ba1f26be145a2621c08f3bb6",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T17:00:07Z",
+    "home_team": "Penn State Nittany Lions",
+    "away_team": "La Salle Explorers",
+    "bookmakers": []
+  },
+  {
+    "id": "baf7317bc02f42c50497be0aad95db23",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T18:00:30Z",
+    "home_team": "Texas Longhorns",
+    "away_team": "UMKC Kangaroos",
+    "bookmakers": []
+  },
+  {
+    "id": "f61ec9ac63985e018064ffd9075c0335",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T19:00:00Z",
+    "home_team": "Temple Owls",
+    "away_team": "Boston College Eagles",
+    "bookmakers": []
+  },
+  {
+    "id": "25b1a5f3ad3dc01c557f435eafdeb25b",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T19:00:00Z",
+    "home_team": "SMU Mustangs",
+    "away_team": "Butler Bulldogs",
+    "bookmakers": []
+  },
+  {
+    "id": "26b76d6cf08473bb4ba76c0cc0d90c83",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T19:00:00Z",
+    "home_team": "Kansas Jayhawks",
+    "away_team": "Princeton Tigers",
+    "bookmakers": []
+  },
+  {
+    "id": "9572200eb7973686572f8d2b2a002f63",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T19:00:00Z",
+    "home_team": "Marquette Golden Eagles",
+    "away_team": "Maryland Terrapins",
+    "bookmakers": []
+  },
+  {
+    "id": "d66d31475c8d174ed98c381f6278c3a6",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T20:30:56Z",
+    "home_team": "Syracuse Orange",
+    "away_team": "Drexel Dragons",
+    "bookmakers": []
+  },
+  {
+    "id": "d596a9154e99375848961f8679297a4d",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-15T21:00:00Z",
+    "home_team": "Utah State Aggies",
+    "away_team": "UTEP Miners",
+    "bookmakers": []
+  },
+  {
+    "id": "7feed5f6ea61046c43044b9d436bde1e",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-16T00:00:00Z",
+    "home_team": "UConn Huskies",
+    "away_team": "BYU Cougars",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-14T21:28:46Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "BYU Cougars",
+                "price": -110,
+                "point": 4.5
+              },
+              {
+                "name": "UConn Huskies",
+                "price": -110,
+                "point": -4.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-14T21:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 154.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 154.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a7f7587d196bc784472013fadc488acc",
+    "sport_key": "basketball_ncaab",
+    "sport_title": "NCAAB",
+    "commence_time": "2025-11-16T00:00:00Z",
+    "home_team": "Nebraska Cornhuskers",
+    "away_team": "Oklahoma Sooners",
+    "bookmakers": []
+  }
+]

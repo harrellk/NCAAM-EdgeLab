@@ -1,0 +1,236 @@
+alias,team
+Abilene Christian,Abilene Christian
+Air Force,Air Force
+Akron,Akron
+Alabama,Alabama
+Alabama A and M,Alabama A&M
+Alabama A&M,Alabama A&M
+Alabama State,Alabama St.
+Albany,Albany
+Alcorn State,Alcorn St.
+American,American
+Appalachian State,Appalachian St.
+Arizona,Arizona
+Arizona State,Arizona St.
+Arkansas,Arkansas
+Arkansas State,Arkansas St.
+Arkansas Pine-Bluff,Arkansas Pine Bluff
+Ball State,Ball St.
+Boise State,Boise St.
+Boston College,Boston College
+Bowling Green State,Bowling Green
+Buffalo,Buffalo
+Cal State Bakersfield,Cal St. Bakersfield
+Cal State Fullerton,Cal St. Fullerton
+California,California
+Charleston Southern,Charleston Southern
+Chicago State,Chicago St.
+Cincinnati,Cincinnati
+Cleveland State,Cleveland St.
+Colorado,Colorado
+Colorado State,Colorado St.
+Columbia,Columbia
+Cornell,Cornell
+CSUN,CSUN
+Drake,Drake
+Drexel,Drexel
+Duke,Duke
+Duquesne,Duquesne
+East Carolina,East Carolina
+Eastern Illinois,Eastern Illinois
+Eastern Kentucky,Eastern Kentucky
+Eastern Michigan,Eastern Michigan
+Eastern Washington,Eastern Washington
+Evansville,Evansville
+FIU,FIU
+Florida,Florida
+Florida A&M,Florida A&M
+Florida Atlantic,Florida Atlantic
+Florida Gulf Coast,Florida Gulf Coast
+Florida State,Florida St.
+Fordham,Fordham
+Fresno State,Fresno St.
+Furman,Furman
+Gardner-Webb,Gardner Webb
+George Mason,George Mason
+George Washington,George Washington
+Georgetown,Georgetown
+Georgia,Georgia
+Georgia Southern,Georgia Southern
+Georgia State,Georgia St.
+Georgia Tech,Georgia Tech
+Gonzaga,Gonzaga
+Grambling State,Grambling St.
+Grand Canyon,Grand Canyon
+Green Bay,Green Bay
+Hampton,Hampton
+Harvard,Harvard
+Hawaii,Hawaii
+High Point,High Point
+Hofstra,Hofstra
+Holy Cross,Holy Cross
+Houston,Houston
+Houston Christian,Houston Christian
+Howard,Howard
+Idaho,Idaho
+Idaho State,Idaho St.
+Illinois,Illinois
+Illinois State,Illinois St.
+Illinois-Chicago,Illinois Chicago
+Incarnate Word,Incarnate Word
+Indiana,Indiana
+Indiana State,Indiana St.
+Iona,Iona
+Iowa,Iowa
+Iowa State,Iowa St.
+Jackson State,Jackson St.
+Jacksonville State,Jacksonville St.
+James Madison,James Madison
+Kansas,Kansas
+Kansas State,Kansas St.
+Kennesaw State,Kennesaw St.
+Kent State,Kent St.
+Kentucky,Kentucky
+LIU,LIU
+LSU,LSU
+La Salle,La Salle
+Lafayette,Lafayette
+Lamar,Lamar
+Le Moyne,Le Moyne
+Lehigh,Lehigh
+Liberty,Liberty
+Lindenwood,Lindenwood
+Lipscomb,Lipscomb
+Little Rock,Little Rock
+Long Beach State,Long Beach St.
+Longwood,Longwood
+Louisiana,Louisiana
+Louisiana Monroe,Louisiana Monroe
+Louisiana Tech,Louisiana Tech
+Louisville,Louisville
+Loyola Chicago,Loyola Chicago
+Loyola Marymount,Loyola Marymount
+Maine,Maine
+Manhattan,Manhattan
+Marist,Marist
+Marquette,Marquette
+Marshall,Marshall
+Maryland,Maryland
+Maryland Eastern Shore,Maryland Eastern Shore
+Massachusetts,Massachusetts
+McNeese,McNeese
+Memphis,Memphis
+Mercer,Mercer
+Merrimack,Merrimack
+Miami FL,Miami FL
+Miami OH,Miami OH
+Michigan,Michigan
+Michigan State,Michigan St.
+Middle Tennessee,Middle Tennessee
+Milwaukee,Milwaukee
+Minnesota,Minnesota
+Mississippi,Mississippi
+Mississippi State,Mississippi St.
+Mississippi Valley State,Mississippi Valley St.
+Missouri,Missouri
+Missouri State,Missouri St.
+Monmouth,Monmouth
+Montana,Montana
+Montana State,Montana St.
+Morehead State,Morehead St.
+Morgan State,Morgan St.
+Murray State,Murray St.
+N.C. State,N.C. State
+NC State,N.C. State
+Navy,Navy
+Nebraska,Nebraska
+Nevada,Nevada
+New Hampshire,New Hampshire
+New Mexico,New Mexico
+New Mexico State,New Mexico St.
+Niagara,Niagara
+Nicholls,Nicholls
+Norfolk State,Norfolk St.
+North Alabama,North Alabama
+North Carolina,North Carolina
+North Carolina A&T,North Carolina A&T
+North Carolina Central,North Carolina Central
+North Dakota,North Dakota
+North Dakota State,North Dakota St.
+North Florida,North Florida
+North Texas,North Texas
+Northeastern,Northeastern
+Northern Arizona,Northern Arizona
+Northern Colorado,Northern Colorado
+Northern Illinois,Northern Illinois
+Northern Iowa,Northern Iowa
+Northern Kentucky,Northern Kentucky
+Northwestern,Northwestern
+Northwestern State,Northwestern St.
+Notre Dame,Notre Dame
+Oakland,Oakland
+Ohio,Ohio
+Ohio State,Ohio St.
+Oklahoma,Oklahoma
+Oklahoma State,Oklahoma St.
+Old Dominion,Old Dominion
+Omaha,Nebraska Omaha
+Oral Roberts,Oral Roberts
+Oregon,Oregon
+Oregon State,Oregon St.
+Pacific,Pacific
+Penn,Penn
+Penn State,Penn St.
+Pepperdine,Pepperdine
+Pittsburgh,Pittsburgh
+Portland,Portland
+Portland State,Portland St.
+Prairie View A and M,Prairie View A&M
+Presbyterian,Presbyterian
+Princeton,Princeton
+Providence,Providence
+Purdue,Purdue
+Purdue Fort Wayne,Purdue Fort Wayne
+Queens,Queens
+Quinnipiac,Quinnipiac
+Radford,Radford
+Rhode Island,Rhode Island
+Rice,Rice
+Richmond,Richmond
+Rider,Rider
+Robert Morris,Robert Morris
+Rutgers,Rutgers
+Sacramento State,Sacramento St.
+Sacred Heart,Sacred Heart
+Saint Francis,Saint Francis
+Saint Joseph's,Saint Joseph's
+Saint Louis,Saint Louis
+Saint Mary's,Saint Mary's
+Saint Peter's,Saint Peter's
+Sam Houston State,Sam Houston St.
+Samford,Samford
+San Diego,San Diego
+San Diego State,San Diego St.
+San Francisco,San Francisco
+San Jose State,San Jose St.
+Santa Clara,Santa Clara
+Seattle,Seattle
+Seton Hall,Seton Hall
+Siena,Siena
+South Alabama,South Alabama
+South Carolina,South Carolina
+South Carolina State,South Carolina St.
+South Dakota,South Dakota
+South Dakota State,South Dakota St.
+South Florida,South Florida
+Southeast Missouri State,Southeast Missouri
+Southeastern Louisiana,Southeastern Louisiana
+Southern,Southern
+Southern Illinois,Southern Illinois
+Southern Indiana,Southern Indiana
+Southern Miss,Southern Miss
+Southern Utah,Southern Utah
+St. Bonaventure,St. Bonaventure
+St. John's,St. John's
+St. Thomas,St. Thomas
+Stanford,Stanford
