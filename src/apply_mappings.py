@@ -1,6 +1,7 @@
 import pandas as pd
 from utils import normalize
 
+
 def apply_alias_mapping(df, alias_file):
     aliases = pd.read_csv(alias_file)
 

@@ -11,7 +11,7 @@ PARAMS = {
     "regions": "us",
     "markets": "spreads,totals",
     "oddsFormat": "american",
-    "bookmakers": "draftkings"   # ← ONLY DK ODDS
+    "bookmakers": "draftkings",  # ← ONLY DK ODDS
 }
 
 print("📡 Fetching DraftKings-only NCAAB odds...")

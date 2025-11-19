@@ -1,0 +1,55 @@
+name: EdgeLab CI
+
+on:
+  pull_request:
+    branches: [ "master" ]
+  push:
+    branches: [ "dev" ]
+
+jobs:
+  build:
+    name: Lint + Format + Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff black pytest
+          # Optional: install project packages
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      # -----------------------
+      # Ruff Lint
+      # -----------------------
+      - name: Ruff Lint
+        run: ruff check .
+
+      # -----------------------
+      # Black Format Check
+      # -----------------------
+      - name: Black Format Check
+        run: black --check .
+
+      # -----------------------
+      # Pytest (optional for now)
+      # -----------------------
+      - name: Run Tests
+        run: |
+          if [ -d tests ]; then pytest -q; fi
+
+      # -----------------------
+      # Model Sanity Check
+      # Ensures your pipeline runs without errors
+      # -----------------------
+      - name: EdgeLab Sanity Check
+        run: |
+          python src/run_daily.py || (echo "Model sanity check failed" && exit 1)

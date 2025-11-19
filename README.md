@@ -1,7 +1,7 @@
-# 🏀 NCAAM EdgeLab  
-### Advanced College Basketball Modeling & Betting Analytics  
-**Author:** Harl (Kevin Harrell)  
-**Status:** v1.0.0 — Stable Modular Pipeline  
+# 🏀 NCAAM EdgeLab
+### Advanced College Basketball Modeling & Betting Analytics
+**Author:** Harl (Kevin Harrell)
+**Status:** v1.0.0 — Stable Modular Pipeline
 **Branches:** `master` (stable) • `dev` (active development)
 
 ---
@@ -17,10 +17,10 @@ NCAAM EdgeLab is a fully modular college basketball analytics engine built to:
 - Produce daily **playable model output** for handicapping
 
 The system is built for:
-- Accuracy  
-- Reproducibility  
-- Transparency  
-- Long-term maintainability  
+- Accuracy
+- Reproducibility
+- Transparency
+- Long-term maintainability
 
 It runs through a clean daily pipeline:
 
@@ -114,12 +114,12 @@ Copy code
 
 This performs:
 
-1. Load DraftKings odds  
-2. Load + merge KenPom  
-3. Team alias normalization  
-4. Spread/total model computation  
-5. Calibration + home-court adjustments  
-6. Value-side selection  
+1. Load DraftKings odds
+2. Load + merge KenPom
+3. Team alias normalization
+4. Spread/total model computation
+5. Calibration + home-court adjustments
+6. Value-side selection
 7. Save output to:
 
 output/model/Model_Batch_Output_Calibrated.csv
@@ -131,36 +131,36 @@ Copy code
 
 ## 📊 Model Features
 
-### **✔ Calibrated spreads (home & away)**  
-- Uses corrected home-only convention  
-- Applies home-court advantage  
+### **✔ Calibrated spreads (home & away)**
+- Uses corrected home-only convention
+- Applies home-court advantage
 - Blowout compression logic (>18pt spreads)
 
-### **✔ Calibrated totals**  
-- Tempo-adjusted  
-- KenPom-based AdjOE + AdjDE  
+### **✔ Calibrated totals**
+- Tempo-adjusted
+- KenPom-based AdjOE + AdjDE
 - Model scaling factor
 
-### **✔ Win probability**  
+### **✔ Win probability**
 Using logistic transformation of model spread.
 
-### **✔ True betting edges**  
+### **✔ True betting edges**
 Automatically computes:
 
-- HomeSpreadEdge  
-- AwaySpreadEdge  
-- TotalEdge  
-- EdgeSide  
-- EdgeTeam  
-- EdgePoints  
+- HomeSpreadEdge
+- AwaySpreadEdge
+- TotalEdge
+- EdgeSide
+- EdgeTeam
+- EdgePoints
 
 ---
 
 ## 🧩 Development Workflow
 
 ### **Branches**
-- `master` — stable, tagged versions only  
-- `dev` — everyday coding happens here  
+- `master` — stable, tagged versions only
+- `dev` — everyday coding happens here
 
 ### **Typical workflow**
 git checkout dev
@@ -206,10 +206,10 @@ Copy code
 
 Tracks:
 
-- Spread bias  
-- Total bias  
-- Model MAE  
-- Edge hit/miss rate  
+- Spread bias
+- Total bias
+- Model MAE
+- Edge hit/miss rate
 
 Future enhancements will include automated trend detection.
 
@@ -218,10 +218,10 @@ Future enhancements will include automated trend detection.
 ## 🧭 Roadmap
 
 ### Upcoming:
-- Model bias self-correction  
-- Automated tuning (spread/total scaling)  
-- Advanced matchup-based adjustments  
-- Player-level impact (Fouls / usage / injuries)  
+- Model bias self-correction
+- Automated tuning (spread/total scaling)
+- Advanced matchup-based adjustments
+- Player-level impact (Fouls / usage / injuries)
 - Web dashboard for output visualization
 
 ---
@@ -229,10 +229,10 @@ Future enhancements will include automated trend detection.
 ## 🤝 Contributions
 
 This is a closed personal project, but structure is ready for:
-- branching  
-- pull requests  
-- issue tracking  
-- documentation  
+- branching
+- pull requests
+- issue tracking
+- documentation
 
 ---
 

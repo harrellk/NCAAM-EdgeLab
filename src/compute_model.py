@@ -1,5 +1,5 @@
 import numpy as np
-import pandas as pd
+
 
 def compute_model(df, default_hca=3.4):
     """
@@ -38,17 +38,17 @@ def compute_model(df, default_hca=3.4):
     # ----------------------------------------------------------
     # 5) Calibration factors
     # ----------------------------------------------------------
-    SPREAD_SCALE = 1.22    # adjust later with data
-    TOTAL_SCALE  = 1.08    # adjust later with data
+    SPREAD_SCALE = 1.22  # adjust later with data
+    TOTAL_SCALE = 1.08  # adjust later with data
 
     df["HomeModelSpread"] *= SPREAD_SCALE
     df["AwayModelSpread"] *= SPREAD_SCALE
-    df["ModelTotal"]      *= TOTAL_SCALE
+    df["ModelTotal"] *= TOTAL_SCALE
 
     # Clean rounding
     df["HomeModelSpread"] = df["HomeModelSpread"].round(2)
     df["AwayModelSpread"] = df["AwayModelSpread"].round(2)
-    df["ModelTotal"]      = df["ModelTotal"].round(1)
+    df["ModelTotal"] = df["ModelTotal"].round(1)
 
     # ----------------------------------------------------------
     # 6) Nonlinear blowout compression
@@ -57,7 +57,7 @@ def compute_model(df, default_hca=3.4):
     def compress_spread(x, cap=18, shrink=0.50):
         """
         Compress extreme spreads to prevent unrealistic blowout margins.
-        
+
         cap = threshold where compression starts
         shrink = percentage to compress excess margin
         """
@@ -69,8 +69,8 @@ def compute_model(df, default_hca=3.4):
         return np.sign(x) * compressed
 
     # commented out for now due to drastically reducing the spreads of anticipated blowouts; need more data
-    #df["HomeModelSpread"] = df["HomeModelSpread"].apply(compress_spread)
-    #df["AwayModelSpread"] = df["AwayModelSpread"].apply(compress_spread)
+    # df["HomeModelSpread"] = df["HomeModelSpread"].apply(compress_spread)
+    # df["AwayModelSpread"] = df["AwayModelSpread"].apply(compress_spread)
 
     # ----------------------------------------------------------
     # 7) Win probability (using calibrated spread)
@@ -83,4 +83,3 @@ def compute_model(df, default_hca=3.4):
     df["WinProb_A_pct"] = df["WinProb_A_pct"].clip(1, 99).round(3)
 
     return df
-
