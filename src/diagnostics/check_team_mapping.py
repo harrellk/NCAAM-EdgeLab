@@ -1,8 +1,8 @@
 import sys
 import pandas as pd
 from pathlib import Path
-from utils import normalize
-from fetch_odds import load_draftkings_odds  # <-- correct loader
+from src.utils import normalize
+from src.fetch_odds import load_draftkings_odds  # <-- correct loader
 
 # Add project /src folder to import path
 ROOT = Path(__file__).resolve().parents[1]
