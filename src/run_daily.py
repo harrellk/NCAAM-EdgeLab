@@ -13,17 +13,18 @@ print("\n==========================================")
 print("🏀 NCAAM EdgeLab — Daily Pipeline (MODULAR)")
 print("==========================================\n")
 
+
 # === Directory structure ===
 BASE = Path(__file__).resolve().parents[1]
 
-RAW   = BASE / "data" / "raw"
-PROC  = BASE / "data" / "processed"
-MAP   = BASE / "data" / "mappings"
-OUT   = BASE / "output" / "model"
+RAW = BASE / "data" / "raw"
+PROC = BASE / "data" / "processed"
+MAP = BASE / "data" / "mappings"
+OUT = BASE / "output" / "model"
 
-ODDS_FILE  = RAW / "daily_odds.json"
+ODDS_FILE = RAW / "daily_odds.json"
 ALIAS_FILE = MAP / "team_aliases.csv"
-KP_DIR     = RAW
+KP_DIR = RAW
 
 
 # =====================================================================
@@ -60,8 +61,8 @@ odds["Away_norm"] = odds["AwayTeam"].apply(normalize)
 kp_lookup = kp.set_index("Team_norm")
 
 # Validate every team is recognized
-missing_home = odds[~ odds["Home_norm"].isin(kp_lookup.index)]
-missing_away = odds[~ odds["Away_norm"].isin(kp_lookup.index)]
+missing_home = odds[~odds["Home_norm"].isin(kp_lookup.index)]
+missing_away = odds[~odds["Away_norm"].isin(kp_lookup.index)]
 
 if len(missing_home) or len(missing_away):
     print("\n❌ Unmatched teams found!")
@@ -121,4 +122,3 @@ print(f"   • {PROC/'ModelInput_Today.csv'}")
 
 print("\n🔥 Pipeline complete.")
 print("==========================================\n")
-

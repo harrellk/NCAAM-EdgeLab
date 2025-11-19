@@ -1,19 +1,73 @@
-# Python caches
+# ============================
+# Python
+# ============================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
 
-# Virtual environment
+# Virtual environments
 venv/
+.env/
+ENV/
+env/
+.venv/
 
-# Data files (too large to version control)
-data/raw/
-data/processed/
-output/
+# Jupyter
+.ipynb_checkpoints/
 
-# OS junk
+# ============================
+# VS Code
+# ============================
+.vscode/
+.history/
+
+# ============================
+# OS / Editor junk
+# ============================
 .DS_Store
 Thumbs.db
 
-# IDE settings
-.vscode/
-*.code-workspace
+# ============================
+# Project-specific
+# ============================
+
+# Raw sensitive / changing daily odds
+data/raw/daily_odds*.json
+data/raw/odds_archive/
+
+# Large raw data drops
+data/raw/*.csv
+
+# Keep ONLY homecourt + team_aliases + KP seeds
+!data/raw/homecourt.csv
+!data/mappings/team_aliases.csv
+!data/mappings/team_aliases.txt
+
+# KP processed master file (re-generated daily)
+data/processed/kenpom/
+
+# Model inputs & outputs (re-generated daily)
+data/processed/ModelInput_Today.csv
+output/model/*.csv
+output/model/*.xlsx
+
+# Diagnostics
+output/diagnostics_*.csv
+output/logs/
+output/reports/
+
+# ============================
+# Node / Web (future-proofing)
+# ============================
+node_modules/
+dist/
+build/
+
+# ============================
+# PyCharm / JetBrains
+# ============================
+.idea/
