@@ -3,83 +3,82 @@ import numpy as np
 
 def compute_model(df, default_hca=3.4):
     """
-    Compute model projections using KenPom efficiency metrics,
-    with home-court advantage and calibration applied.
+    Possession-adjusted scoring model using OE/DE, harmonic tempo,
+    and score-driven spreads (ModelSpread = PredictedMargin).
     """
 
-    # ----------------------------------------------------------
-    # 1) Home-court advantage
-    # ----------------------------------------------------------
-    if "HomeCourtAdv_A" in df.columns:
-        HCA = df["HomeCourtAdv_A"].fillna(default_hca)
-    else:
-        HCA = default_hca
+    # -------------------------
+    # 1) Home Court Advantage
+    # -------------------------
+    HCA = df.get("HomeCourtAdv_A", default_hca).fillna(default_hca)
 
-    # ----------------------------------------------------------
-    # 2) Raw model margin (positive = home stronger)
-    # ----------------------------------------------------------
-    raw_margin = df["AdjEM_A"] - df["AdjEM_B"] + HCA
+    # -------------------------
+    # 2) Possession Model
+    # -------------------------
+    tempo_A = df["AdjTempo_A"]
+    tempo_B = df["AdjTempo_B"]
 
-    # ----------------------------------------------------------
-    # 3) Convert to sportsbook convention before calibration
-    #    Negative = home favorite
-    # ----------------------------------------------------------
-    df["HomeModelSpread"] = -raw_margin
-    df["AwayModelSpread"] = raw_margin
+    df["PredPoss"] = 2 / ((1 / tempo_A) + (1 / tempo_B))
+    df["PredPoss"] = df["PredPoss"].clip(60, 78)
 
-    # ----------------------------------------------------------
-    # 4) Raw model total
-    # ----------------------------------------------------------
-    tempo_factor = (df["AdjTempo_A"] + df["AdjTempo_B"]) / 2
-    raw_total = (df["AdjOE_A"] + df["AdjOE_B"]) * (tempo_factor / 100)
+    # -------------------------
+    # 3) Per-possession Offensive/Defensive
+    # -------------------------
+    OE_A_pp = df["AdjOE_A"] / 100
+    DE_A_pp = df["AdjDE_A"] / 100
+    OE_B_pp = df["AdjOE_B"] / 100
+    DE_B_pp = df["AdjDE_B"] / 100
 
-    df["ModelTotal"] = raw_total
+    # -------------------------
+    # 4) Expected PPP
+    # -------------------------
+    A_pp = (OE_A_pp + DE_B_pp) / 2
+    B_pp = (OE_B_pp + DE_A_pp) / 2
 
-    # ----------------------------------------------------------
-    # 5) Calibration factors
-    # ----------------------------------------------------------
-    SPREAD_SCALE = 1.22  # adjust later with data
-    TOTAL_SCALE = 1.08  # adjust later with data
+    # -------------------------
+    # 5) Apply HCA evenly across scoring
+    # -------------------------
+    # Half added to home, half removed from away
+    A_raw = (A_pp * df["PredPoss"]) + (HCA / 2)
+    B_raw = (B_pp * df["PredPoss"]) - (HCA / 2)
 
-    df["HomeModelSpread"] *= SPREAD_SCALE
-    df["AwayModelSpread"] *= SPREAD_SCALE
-    df["ModelTotal"] *= TOTAL_SCALE
+    df["ModelScore_A"] = A_raw.round(1)
+    df["ModelScore_B"] = B_raw.round(1)
 
-    # Clean rounding
-    df["HomeModelSpread"] = df["HomeModelSpread"].round(2)
-    df["AwayModelSpread"] = df["AwayModelSpread"].round(2)
-    df["ModelTotal"] = df["ModelTotal"].round(1)
+    # -------------------------
+    # 6) Spread = score difference (no independent formula!)
+    # -------------------------
+    pred_margin = A_raw - B_raw
 
-    # ----------------------------------------------------------
-    # 6) Nonlinear blowout compression
-    # ----------------------------------------------------------
+    df["HomeModelSpread"] = (-pred_margin).round(2)
+    df["AwayModelSpread"] = (pred_margin).round(2)
 
-    def compress_spread(x, cap=18, shrink=0.50):
-        """
-        Compress extreme spreads to prevent unrealistic blowout margins.
+    # -------------------------
+    # 7) Total = sum of predicted points
+    # -------------------------
+    df["ModelTotal"] = (A_raw + B_raw).round(1)
 
-        cap = threshold where compression starts
-        shrink = percentage to compress excess margin
-        """
-        ax = abs(x)
-        if ax <= cap:
-            return x
-        excess = ax - cap
-        compressed = cap + excess * shrink
-        return np.sign(x) * compressed
-
-    # commented out for now due to drastically reducing the spreads of anticipated blowouts; need more data
-    # df["HomeModelSpread"] = df["HomeModelSpread"].apply(compress_spread)
-    # df["AwayModelSpread"] = df["AwayModelSpread"].apply(compress_spread)
-
-    # ----------------------------------------------------------
-    # 7) Win probability (using calibrated spread)
-    # ----------------------------------------------------------
-    # ----- WIN PROBABILITY -----
-    # Use RAW (unscaled) margin, not sportsbook-style spread.
-    raw_margin = df["AdjEM_A"] - df["AdjEM_B"] + HCA
-
-    df["WinProb_A_pct"] = 100 / (1 + np.exp(-raw_margin / 6))
+    # -------------------------
+    # 8) Win Probability (score-based)
+    # -------------------------
+    df["WinProb_A_pct"] = 100 / (1 + np.exp(-pred_margin / 6))
     df["WinProb_A_pct"] = df["WinProb_A_pct"].clip(1, 99).round(3)
+
+    # -------------------------
+    # 9) Scoreboard & Winner
+    # -------------------------
+    df["PredictedWinner"] = df.apply(
+        lambda r: (
+            r["HomeTeam"] if r["ModelScore_A"] > r["ModelScore_B"] else r["AwayTeam"]
+        ),
+        axis=1,
+    )
+
+    df["PredictedMargin"] = pred_margin.abs().round(1)
+
+    df["PredictedScoreboard"] = df.apply(
+        lambda r: f"{r['HomeTeam']} {round(r['ModelScore_A'])} – {r['AwayTeam']} {round(r['ModelScore_B'])}",
+        axis=1,
+    )
 
     return df
