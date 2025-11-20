@@ -22,7 +22,7 @@ OUT = BASE / "output" / "model"
 
 ODDS_FILE = RAW / "daily_odds.json"
 ALIAS_FILE = MAP / "team_aliases.csv"
-KP_DIR = RAW
+KP_DIR = BASE / "data" / "processed" / "kenpom"
 
 
 # =====================================================================

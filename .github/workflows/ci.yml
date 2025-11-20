@@ -30,6 +30,10 @@ jobs:
           ruff format --check .
           black --check .
 
-      - name: EdgeLab Sanity Check
+      - name: Model Sanity Check
         run: |
-          python src/run_daily.py || (echo "Model sanity check failed" && exit 1)
+          if [ -f data/raw/daily_odds.json ]; then
+            python src/run_daily.py;
+          else
+            echo "⚠️ No daily odds file — skipping model sanity check.";
+          fi
