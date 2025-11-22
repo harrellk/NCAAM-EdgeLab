@@ -8,6 +8,12 @@ from compute_model import compute_model
 from generate_edges import convert_lines
 from utils import normalize
 
+# 🔥 DEBUG: identify which fetch_odds module is actually being used
+import inspect
+import fetch_odds
+
+print("DEBUG: fetch_odds loaded from:", inspect.getfile(fetch_odds))
+
 print("\n==========================================")
 print("🏀 NCAAM EdgeLab — Daily Pipeline (MODULAR)")
 print("==========================================\n")
@@ -31,7 +37,6 @@ KP_DIR = BASE / "data" / "processed" / "kenpom"
 print("📡 Loading DraftKings odds...")
 odds = load_draftkings_odds(ODDS_FILE, ALIAS_FILE)
 print(f"✔ Loaded {len(odds)} matchups.\n")
-
 
 # =====================================================================
 # STEP 2 — Load KenPom Master Table
@@ -76,6 +81,19 @@ for col in kp_cols:
 merged = odds.drop(columns=["Home_norm", "Away_norm"])
 print("✔ Odds + KP merge complete.\n")
 
+# =====================================================================
+# STEP 3B — Neutral-Site Validation & Logging
+# =====================================================================
+if "IsNeutral" in merged.columns:
+    neutrals = merged[merged["IsNeutral"]]
+    if len(neutrals):
+        print("🏟 Neutral-Site Games Detected:")
+        print(neutrals[["Date", "HomeTeam", "AwayTeam", "IsNeutral"]])
+        print()
+    else:
+        print("ℹ No neutral-site games flagged today.")
+        print("   (If this is unexpected, update daily_odds.json)\n")
+
 
 # =====================================================================
 # STEP 4 — Model Computation
@@ -119,6 +137,7 @@ COLUMNS_TO_KEEP = [
     "PredictedWinner",
     "PredictedMargin",
     "PredictedScoreboard",
+    "IsNeutral",  # NEW — include neutral flag in final outputs
 ]
 
 final_trimmed = final[COLUMNS_TO_KEEP]

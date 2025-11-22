@@ -23,6 +23,15 @@ if response.status_code != 200:
 
 data = response.json()
 
+# --------------------------------------------------------
+# Add default neutral-site flag to ALL games
+# --------------------------------------------------------
+for g in data:
+    g["is_neutral"] = False
+
+# --------------------------------------------------------
+# Save output JSON
+# --------------------------------------------------------
 date_str = datetime.date.today().strftime("%Y-%m-%d")
 filename = f"daily_odds_{date_str}.json"
 

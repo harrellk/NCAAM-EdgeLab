@@ -123,6 +123,8 @@ def load_draftkings_odds(json_path, alias_path):
                 "HomeMarketSpread": home_mkt_spread,
                 "AwayMarketSpread": away_mkt_spread,
                 "MarketTotal": total_point,
+                # NEW — pass through neutral-site flag
+                "IsNeutral": g.get("is_neutral", False),
             }
         )
 

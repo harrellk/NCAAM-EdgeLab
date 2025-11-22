@@ -12,7 +12,12 @@ def compute_model(df, default_hca=3.4):
     # 1) Home Court Advantage (team-specific, scaled)
     # ---------------------------------------------------------
     HCA_raw = df.get("HomeCourtAdv_A", default_hca).fillna(default_hca)
-    HCA = HCA_raw * 1.1  # slight upweighting for realism
+
+    # NEW: Zero out HCA for neutral-site games
+    if "IsNeutral" in df.columns:
+        HCA = np.where(df["IsNeutral"], 0, HCA_raw * 1.1)
+    else:
+        HCA = HCA_raw * 1.1
 
     # ---------------------------------------------------------
     # 2) Possession Model (harmonic mean tempo)
