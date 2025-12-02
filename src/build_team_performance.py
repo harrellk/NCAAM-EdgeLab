@@ -50,12 +50,34 @@ def build_team_wide_ats(df):
 
 
 # =====================================================
-# MODEL ACCURACY (MAE / RMSE / Bias)
+# MODEL ACCURACY (Using ALL games, normalized)
 # =====================================================
 def build_model_accuracy(df):
-    df["AbsError"] = df["SpreadError"].abs()
+    rows = []
+
+    for _, row in df.iterrows():
+        # TEAM_A perspective
+        A = row["Team_A"]
+        model_margin_A = row["ModelMargin"]
+        actual_margin_A = row["ActualMargin"]
+        error_A = model_margin_A - actual_margin_A
+
+        rows.append({"Team": A, "SpreadError": error_A})
+
+        # TEAM_B perspective = flip signs
+        B = row["Team_B"]
+        model_margin_B = -row["ModelMargin"]
+        actual_margin_B = -row["ActualMargin"]
+        error_B = model_margin_B - actual_margin_B
+
+        rows.append({"Team": B, "SpreadError": error_B})
+
+    # Build dataframe of normalized errors
+    df_norm = pd.DataFrame(rows)
+    df_norm["AbsError"] = df_norm["SpreadError"].abs()
+
     group = (
-        df.groupby("Team_A")
+        df_norm.groupby("Team")
         .agg(
             Games=("SpreadError", "count"),
             MAE=("AbsError", "mean"),
@@ -63,8 +85,8 @@ def build_model_accuracy(df):
             Bias=("SpreadError", "mean"),
         )
         .reset_index()
-        .rename(columns={"Team_A": "Team"})
     )
+
     return group
 
 
