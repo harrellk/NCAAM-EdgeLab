@@ -110,7 +110,6 @@ print("📊 Evaluating edges (spread + totals)...")
 final = convert_lines(merged)
 print("✔ Edge evaluation complete.\n")
 
-
 # =====================================================================
 # STEP 6 — Select Final Output Fields
 # =====================================================================

@@ -54,12 +54,14 @@ def compute_model(df, default_hca=3.4):
     df["ModelTotal"] = (A_raw + B_raw).round(1)
 
     # ---------------------------------------------------------
-    # 6) EM-based SPREAD (hybrid margin)
+    # 6) EM-based SPREAD (hybrid margin) — CALIBRATED VERSION
     # ---------------------------------------------------------
     EM_diff = df["AdjEM_A"] - df["AdjEM_B"]
+    EM_term = EM_diff * (df["PredPoss"] / 100)
 
-    # tempo-adjusted EM margin + HCA
-    hybrid_margin = (EM_diff * (df["PredPoss"] / 100)) + HCA
+    # Apply calibrated multipliers from regression:
+    # hybrid_margin = 1.24 * EM_term + 0.84 * HCA + 0.20
+    hybrid_margin = (1.24 * EM_term) + (0.84 * HCA) + 0.20
 
     # sportsbook-aligned spreads
     df["HomeModelSpread"] = (-hybrid_margin).round(2)

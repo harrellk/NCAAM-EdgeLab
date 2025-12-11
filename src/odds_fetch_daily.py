@@ -11,7 +11,7 @@ PARAMS = {
     "regions": "us",
     "markets": "spreads,totals",
     "oddsFormat": "american",
-    "bookmakers": "draftkings",  # ← ONLY DK ODDS
+    "bookmakers": "draftkings",
 }
 
 print("📡 Fetching DraftKings-only NCAAB odds...")
@@ -23,15 +23,16 @@ if response.status_code != 200:
 
 data = response.json()
 
-# --------------------------------------------------------
-# Add default neutral-site flag to ALL games
-# --------------------------------------------------------
-for g in data:
-    g["is_neutral"] = False
+# -------------------------------------------------------
+# Add IsNeutral = the API's neutral_site flag
+# -------------------------------------------------------
+for game in data:
+    # The Odds API field
+    api_flag = game.get("neutral_site", False)
 
-# --------------------------------------------------------
-# Save output JSON
-# --------------------------------------------------------
+    # Normalize it into our pipeline field
+    game["IsNeutral"] = True if api_flag else False
+
 date_str = datetime.date.today().strftime("%Y-%m-%d")
 filename = f"daily_odds_{date_str}.json"
 
@@ -39,3 +40,4 @@ with open(filename, "w") as f:
     json.dump(data, f, indent=2)
 
 print(f"✅ Saved DraftKings odds → {filename}")
+print("🏟️ Included IsNeutral flag directly from neutral_site.")
