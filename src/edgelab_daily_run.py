@@ -1,27 +1,30 @@
 #!/usr/bin/env python3
 import json
 import pandas as pd
-import numpy as np
-from datetime import datetime
 
 # =============================================================================
 # Utility
 # =============================================================================
 
+
 def normalize(s: str) -> str:
     if not isinstance(s, str):
         return ""
-    return (s.lower()
-            .replace(".", "")
-            .replace(",", "")
-            .replace("-", " ")
-            .replace("&", "and")
-            .replace("st ", "state ")
-            .replace("  ", " ")
-            .strip())
+    return (
+        s.lower()
+        .replace(".", "")
+        .replace(",", "")
+        .replace("-", " ")
+        .replace("&", "and")
+        .replace("st ", "state ")
+        .replace("  ", " ")
+        .strip()
+    )
+
 
 def safe(df, col, default=0):
     return df[col] if col in df.columns else pd.Series([default] * len(df))
+
 
 # =============================================================================
 # Load DraftKings JSON + Build Odds DataFrame
@@ -61,13 +64,15 @@ for g in raw:
                     if o["name"].lower() == "over":
                         total_points = o.get("point", None)
 
-        dk_games.append({
-            "Date": g["commence_time"].split("T")[0],
-            "HomeTeam_raw": home,
-            "AwayTeam_raw": away,
-            "MarketSpread": spread_home,
-            "MarketTotal": total_points
-        })
+        dk_games.append(
+            {
+                "Date": g["commence_time"].split("T")[0],
+                "HomeTeam_raw": home,
+                "AwayTeam_raw": away,
+                "MarketSpread": spread_home,
+                "MarketTotal": total_points,
+            }
+        )
 
 odds_df = pd.DataFrame(dk_games)
 print(f"✅ Loaded {len(odds_df)} DK matchups.")
@@ -92,7 +97,7 @@ print("🔍 Loading team_aliases.csv...")
 aliases = pd.read_csv(ALIAS_FILE)
 
 aliases["Alias_norm"] = aliases["Alias"].apply(normalize)
-aliases["Team_norm"]  = aliases["Team"].apply(normalize)
+aliases["Team_norm"] = aliases["Team"].apply(normalize)
 
 alias_map = dict(zip(aliases["Alias_norm"], aliases["Team"]))
 
@@ -101,6 +106,7 @@ print("✅ Applying alias + direct mappings...")
 # =============================================================================
 # Apply Mappings
 # =============================================================================
+
 
 def map_team(name_raw):
     n = normalize(name_raw)
@@ -114,6 +120,7 @@ def map_team(name_raw):
 
     # No match — fail loudly
     return None
+
 
 odds_df["HomeTeam"] = odds_df["HomeTeam_raw"].apply(map_team)
 odds_df["AwayTeam"] = odds_df["AwayTeam_raw"].apply(map_team)
@@ -137,9 +144,7 @@ kp_A = kp_A.rename(columns={"A_Team": "Team_A", "A_Team_norm": "Team_norm_A"})
 kp_B = kp.add_prefix("B_")
 kp_B = kp_B.rename(columns={"B_Team": "Team_B", "B_Team_norm": "Team_norm_B"})
 
-merged = odds_df.merge(
-    kp_A, left_on="HomeTeam", right_on="Team_A", how="left"
-).merge(
+merged = odds_df.merge(kp_A, left_on="HomeTeam", right_on="Team_A", how="left").merge(
     kp_B, left_on="AwayTeam", right_on="Team_B", how="left"
 )
 
@@ -189,6 +194,7 @@ win_prob = (50 + model_spread * 2.3).clip(1, 99)
 # Convert to True Sportsbook Lines (Corrected)
 # =============================================================================
 
+
 def convert_to_true_lines(row):
     A = row["Team_A"]
     B = row["Team_B"]
@@ -211,7 +217,7 @@ def convert_to_true_lines(row):
     # --------------------------
     # Market favorite logic
     # --------------------------
-    if mk < 0:    # negative = favorite
+    if mk < 0:  # negative = favorite
         market_fav = A
         market_dog = B
     else:
@@ -232,33 +238,38 @@ def convert_to_true_lines(row):
 
     edge = model_line_mkt - market_line
 
-    return pd.Series({
-        "Model_Favorite": model_fav,
-        "Model_Underdog": model_dog,
-        "Model_Line": round(model_line, 2),
-        "Market_Favorite": market_fav,
-        "Market_Underdog": market_dog,
-        "Market_Line": market_line,
-        "Edge_Side": model_dog if edge > 0 else model_fav,
-        "Edge_Points": round(edge, 2)
-    })
+    return pd.Series(
+        {
+            "Model_Favorite": model_fav,
+            "Model_Underdog": model_dog,
+            "Model_Line": round(model_line, 2),
+            "Market_Favorite": market_fav,
+            "Market_Underdog": market_dog,
+            "Market_Line": market_line,
+            "Edge_Side": model_dog if edge > 0 else model_fav,
+            "Edge_Points": round(edge, 2),
+        }
+    )
+
 
 # =============================================================================
 # Final Output DataFrame
 # =============================================================================
 
-out = pd.DataFrame({
-    "Date": merged["Date"],
-    "Team_A": merged["Team_A"],
-    "Team_B": merged["Team_B"],
-    "ModelSpread": model_spread.round(2),
-    "MarketSpread": market_spread,
-    "SpreadEdge": spread_edge.round(2),
-    "ModelTotal": model_total.round(1),
-    "MarketTotal": market_total,
-    "TotalEdge": total_edge.round(1),
-    "WinProb_A_pct": win_prob.round(3),
-})
+out = pd.DataFrame(
+    {
+        "Date": merged["Date"],
+        "Team_A": merged["Team_A"],
+        "Team_B": merged["Team_B"],
+        "ModelSpread": model_spread.round(2),
+        "MarketSpread": market_spread,
+        "SpreadEdge": spread_edge.round(2),
+        "ModelTotal": model_total.round(1),
+        "MarketTotal": market_total,
+        "TotalEdge": total_edge.round(1),
+        "WinProb_A_pct": win_prob.round(3),
+    }
+)
 
 true_lines = out.apply(convert_to_true_lines, axis=1)
 out = pd.concat([out, true_lines], axis=1)

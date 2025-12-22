@@ -1,86 +1,125 @@
 import numpy as np
-import pandas as pd
+
+
+def hca_taper(em_gap):
+    """
+    Option A HCA taper:
+    - Full HCA when teams are similar
+    - Fade HCA as mismatch grows
+    """
+    taper = np.ones_like(em_gap)
+
+    # Fade zone: 6 → 16 EM gap
+    mask = (em_gap > 6) & (em_gap < 16)
+    taper[mask] = 1.0 - ((em_gap[mask] - 6) / 10) * 0.5
+
+    # Floor at 50%
+    taper[em_gap >= 16] = 0.50
+
+    return taper
+
 
 def compute_model(df, default_hca=3.4):
     """
-    Compute model projections using KenPom efficiency metrics,
-    with home-court advantage and calibration applied.
+    Hybrid scoring model:
+    - PPP-based scoring for ModelScore_A / ModelScore_B / ModelTotal
+    - EM-tempo-based model margin for spreads, win probabilities, and predicted margin
     """
 
-    # ----------------------------------------------------------
-    # 1) Home-court advantage
-    # ----------------------------------------------------------
-    if "HomeCourtAdv_A" in df.columns:
-        HCA = df["HomeCourtAdv_A"].fillna(default_hca)
-    else:
-        HCA = default_hca
+    # ---------------------------------------------------------
+    # 1) Home Court Advantage (team-specific, tapered)
+    # ---------------------------------------------------------
+    HCA_raw = df.get("HomeCourtAdv_A", default_hca).fillna(default_hca)
 
-    # ----------------------------------------------------------
-    # 2) Raw model margin (positive = home stronger)
-    # ----------------------------------------------------------
-    raw_margin = df["AdjEM_A"] - df["AdjEM_B"] + HCA
+    # Base scaling (existing behavior)
+    HCA_base = HCA_raw * 1.1
 
-    # ----------------------------------------------------------
-    # 3) Convert to sportsbook convention before calibration
-    #    Negative = home favorite
-    # ----------------------------------------------------------
-    df["HomeModelSpread"] = -raw_margin
-    df["AwayModelSpread"] = raw_margin
+    # Neutral-site zero-out
+    if "IsNeutral" in df.columns:
+        HCA_base = np.where(df["IsNeutral"], 0, HCA_base)
 
-    # ----------------------------------------------------------
-    # 4) Raw model total
-    # ----------------------------------------------------------
-    tempo_factor = (df["AdjTempo_A"] + df["AdjTempo_B"]) / 2
-    raw_total = (df["AdjOE_A"] + df["AdjOE_B"]) * (tempo_factor / 100)
+    # Apply Option A taper
+    EM_gap = (df["AdjEM_A"] - df["AdjEM_B"]).abs()
+    taper = hca_taper(EM_gap)
 
-    df["ModelTotal"] = raw_total
+    HCA = HCA_base * taper
+    df["EffectiveHCA"] = HCA.round(2)
 
-    # ----------------------------------------------------------
-    # 5) Calibration factors
-    # ----------------------------------------------------------
-    SPREAD_SCALE = 1.22    # adjust later with data
-    TOTAL_SCALE  = 1.08    # adjust later with data
+    # ---------------------------------------------------------
+    # 2) Possession Model (harmonic mean tempo)
+    # ---------------------------------------------------------
+    tempo_A = df["AdjTempo_A"]
+    tempo_B = df["AdjTempo_B"]
 
-    df["HomeModelSpread"] *= SPREAD_SCALE
-    df["AwayModelSpread"] *= SPREAD_SCALE
-    df["ModelTotal"]      *= TOTAL_SCALE
+    df["PredPoss"] = 2 / ((1 / tempo_A) + (1 / tempo_B))
+    df["PredPoss"] = df["PredPoss"].clip(60, 78)
 
-    # Clean rounding
-    df["HomeModelSpread"] = df["HomeModelSpread"].round(2)
-    df["AwayModelSpread"] = df["AwayModelSpread"].round(2)
-    df["ModelTotal"]      = df["ModelTotal"].round(1)
+    # ---------------------------------------------------------
+    # 3) PPP components
+    # ---------------------------------------------------------
+    OE_A_pp = df["AdjOE_A"] / 100
+    DE_A_pp = df["AdjDE_A"] / 100
 
-    # ----------------------------------------------------------
-    # 6) Nonlinear blowout compression
-    # ----------------------------------------------------------
+    OE_B_pp = df["AdjOE_B"] / 100
+    DE_B_pp = df["AdjDE_B"] / 100
 
-    def compress_spread(x, cap=18, shrink=0.50):
-        """
-        Compress extreme spreads to prevent unrealistic blowout margins.
-        
-        cap = threshold where compression starts
-        shrink = percentage to compress excess margin
-        """
-        ax = abs(x)
-        if ax <= cap:
-            return x
-        excess = ax - cap
-        compressed = cap + excess * shrink
-        return np.sign(x) * compressed
+    # ---------------------------------------------------------
+    # 4) Expected PPP (smoothed matchup)
+    # ---------------------------------------------------------
+    A_pp = (OE_A_pp + DE_B_pp) / 2
+    B_pp = (OE_B_pp + DE_A_pp) / 2
 
-    # commented out for now due to drastically reducing the spreads of anticipated blowouts; need more data
-    #df["HomeModelSpread"] = df["HomeModelSpread"].apply(compress_spread)
-    #df["AwayModelSpread"] = df["AwayModelSpread"].apply(compress_spread)
+    # ---------------------------------------------------------
+    # 5) PPP → Raw scoring (for scoreboard & totals)
+    # ---------------------------------------------------------
+    A_raw = (A_pp * df["PredPoss"]) + (HCA / 2)
+    B_raw = (B_pp * df["PredPoss"]) - (HCA / 2)
 
-    # ----------------------------------------------------------
-    # 7) Win probability (using calibrated spread)
-    # ----------------------------------------------------------
-    # ----- WIN PROBABILITY -----
-    # Use RAW (unscaled) margin, not sportsbook-style spread.
-    raw_margin = df["AdjEM_A"] - df["AdjEM_B"] + HCA
+    df["ModelScore_A"] = A_raw.round(1)
+    df["ModelScore_B"] = B_raw.round(1)
+    df["ModelTotal"] = (A_raw + B_raw).round(1)
 
-    df["WinProb_A_pct"] = 100 / (1 + np.exp(-raw_margin / 6))
+    # ---------------------------------------------------------
+    # 6) EM-based SPREAD (hybrid margin) — CALIBRATED VERSION
+    # ---------------------------------------------------------
+    EM_diff = df["AdjEM_A"] - df["AdjEM_B"]
+    EM_term = EM_diff * (df["PredPoss"] / 100)
+
+    # Apply calibrated multipliers from regression:
+    # hybrid_margin = 1.24 * EM_term + 0.84 * HCA + 0.20
+    hybrid_margin = (1.24 * EM_term) + (0.84 * HCA) + 0.20
+
+    # sportsbook-aligned spreads
+    df["HomeModelSpread"] = (-hybrid_margin).round(2)
+    df["AwayModelSpread"] = (hybrid_margin).round(2)
+
+    # ---------------------------------------------------------
+    # 7) Win Probability using hybrid margin
+    # ---------------------------------------------------------
+    df["WinProb_A_pct"] = 100 / (1 + np.exp(-hybrid_margin / 6))
     df["WinProb_A_pct"] = df["WinProb_A_pct"].clip(1, 99).round(3)
 
-    return df
+    # ---------------------------------------------------------
+    # 8) Predicted Winner & Margin (use EM-based spread)
+    # ---------------------------------------------------------
+    df["PredictedMargin"] = hybrid_margin.abs().round(1)
 
+    df["PredictedWinner"] = df.apply(
+        lambda r: r["HomeTeam"] if hybrid_margin.loc[r.name] > 0 else r["AwayTeam"],
+        axis=1,
+    )
+
+    # ---------------------------------------------------------
+    # 9) Predicted Scoreboard (PPP scores)
+    #    → BUT show the EM-hybrid implied margin in text
+    # ---------------------------------------------------------
+    def make_scoreboard(row):
+        home = row["HomeTeam"]
+        away = row["AwayTeam"]
+        home_pts = round(row["ModelScore_A"])
+        away_pts = round(row["ModelScore_B"])
+        return f"{home} {home_pts} – {away} {away_pts}"
+
+    df["PredictedScoreboard"] = df.apply(make_scoreboard, axis=1)
+
+    return df

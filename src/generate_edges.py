@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def convert_lines(df: pd.DataFrame) -> pd.DataFrame:
     """
     Correct spread + total edge calculation.
@@ -14,10 +15,14 @@ def convert_lines(df: pd.DataFrame) -> pd.DataFrame:
 
     # Ensure required columns exist
     required = [
-        "HomeMarketSpread", "AwayMarketSpread",
-        "HomeModelSpread", "AwayModelSpread",
-        "ModelTotal", "MarketTotal",
-        "HomeTeam", "AwayTeam"
+        "HomeMarketSpread",
+        "AwayMarketSpread",
+        "HomeModelSpread",
+        "AwayModelSpread",
+        "ModelTotal",
+        "MarketTotal",
+        "HomeTeam",
+        "AwayTeam",
     ]
     missing = [c for c in required if c not in out.columns]
     if missing:
@@ -32,18 +37,15 @@ def convert_lines(df: pd.DataFrame) -> pd.DataFrame:
 
     # Pick best value side
     out["EdgeSide"] = out.apply(
-        lambda r: "HOME" if r["HomeValue"] >= r["AwayValue"] else "AWAY",
-        axis=1
+        lambda r: "HOME" if r["HomeValue"] >= r["AwayValue"] else "AWAY", axis=1
     )
 
     out["EdgeTeam"] = out.apply(
-        lambda r: r["HomeTeam"] if r["EdgeSide"] == "HOME" else r["AwayTeam"],
-        axis=1
+        lambda r: r["HomeTeam"] if r["EdgeSide"] == "HOME" else r["AwayTeam"], axis=1
     )
 
     out["EdgePoints"] = out.apply(
-        lambda r: max(r["HomeValue"], r["AwayValue"]),
-        axis=1
+        lambda r: max(r["HomeValue"], r["AwayValue"]), axis=1
     ).round(2)
 
     # -------------------------
@@ -53,4 +55,3 @@ def convert_lines(df: pd.DataFrame) -> pd.DataFrame:
     out["TotalEdge"] = (out["ModelTotal"] - out["MarketTotal"]).round(2)
 
     return out
-

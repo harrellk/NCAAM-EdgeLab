@@ -10,9 +10,11 @@ height = pd.read_csv("height26.csv")
 misc = pd.read_csv("misc26.csv")
 homecourt = pd.read_csv("homecourt.csv")
 
+
 # === Clean & normalize team names ===
 def clean_team(name):
     return str(name).strip().replace("&", "and").replace(".", "").replace("St", "State")
+
 
 def ensure_team_column(df):
     # find the right column
@@ -24,6 +26,7 @@ def ensure_team_column(df):
         df.insert(0, "Team", "Unknown")
     df["Team"] = df["Team"].apply(clean_team)
     return df
+
 
 for d in [index, offense, defense, height, misc, homecourt]:
     ensure_team_column(d)

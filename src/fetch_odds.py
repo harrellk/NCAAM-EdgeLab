@@ -6,6 +6,7 @@ from pathlib import Path
 # Load Team Alias File
 # =========================
 
+
 def load_alias_map(alias_path: Path):
     if not alias_path.exists():
         return {}
@@ -34,6 +35,7 @@ def normalize(name: str):
 # =========================
 # DraftKings Loader
 # =========================
+
 
 def load_draftkings_odds(json_path, alias_path):
     """
@@ -109,17 +111,21 @@ def load_draftkings_odds(json_path, alias_path):
         Team_A = home_clean
         Team_B = away_clean
 
-        rows.append({
-            "Date": g["commence_time"][:10],
-            "HomeTeam_raw": home_raw,
-            "AwayTeam_raw": away_raw,
-            "HomeTeam": home_clean,
-            "AwayTeam": away_clean,
-            "Team_A": Team_A,
-            "Team_B": Team_B,
-            "HomeMarketSpread": home_mkt_spread,
-            "AwayMarketSpread": away_mkt_spread,
-            "MarketTotal": total_point
-        })
+        rows.append(
+            {
+                "Date": g["commence_time"][:10],
+                "HomeTeam_raw": home_raw,
+                "AwayTeam_raw": away_raw,
+                "HomeTeam": home_clean,
+                "AwayTeam": away_clean,
+                "Team_A": Team_A,
+                "Team_B": Team_B,
+                "HomeMarketSpread": home_mkt_spread,
+                "AwayMarketSpread": away_mkt_spread,
+                "MarketTotal": total_point,
+                # NEW — pass through neutral-site flag
+                "IsNeutral": g.get("IsNeutral", False),
+            }
+        )
 
     return pd.DataFrame(rows)

@@ -3,6 +3,7 @@ from pathlib import Path
 
 print(">>> load_kenpom STARTED (UNIFIED FINAL VERSION)")
 
+
 # ----------------------------
 # Normalize team names
 # ----------------------------
@@ -20,6 +21,7 @@ def normalize_team(s):
         .strip()
     )
 
+
 # ----------------------------
 # Load CSV (standardize Team)
 # ----------------------------
@@ -29,12 +31,7 @@ def load_csv(path: Path) -> pd.DataFrame:
 
     df = pd.read_csv(path)
 
-    rename_map = {
-        "School": "Team",
-        "TeamName": "Team",
-        "team": "Team",
-        "Name": "Team"
-    }
+    rename_map = {"School": "Team", "TeamName": "Team", "team": "Team", "Name": "Team"}
     for s, t in rename_map.items():
         if s in df.columns:
             df = df.rename(columns={s: t})
@@ -43,6 +40,7 @@ def load_csv(path: Path) -> pd.DataFrame:
         raise ValueError(f"❌ No Team column in {path}")
 
     return df
+
 
 # ----------------------------
 # Detect summary file
@@ -60,39 +58,44 @@ def detect_index_file(folder: Path):
 
     raise FileNotFoundError("❌ No summaryXX.csv or index.csv found.")
 
+
 # ----------------------------
 # Main loader
 # ----------------------------
 def load_kenpom(folder: Path) -> pd.DataFrame:
-
     idx_path = detect_index_file(folder)
     off_path = next(folder.glob("offense*.csv"))
     def_path = next(folder.glob("defense*.csv"))
     misc_path = next(folder.glob("misc*.csv"))
-    ht_path   = next(folder.glob("height*.csv"))
-    hca_path  = next(folder.glob("homecourt*.csv"))
+    ht_path = next(folder.glob("height*.csv"))
+    hca_path = next(folder.glob("homecourt*.csv"))
 
     print("📂 Loading KP tables...")
 
-    idx  = load_csv(idx_path)
-    off  = load_csv(off_path)
-    dfm  = load_csv(def_path)
+    idx = load_csv(idx_path)
+    off = load_csv(off_path)
+    dfm = load_csv(def_path)
     misc = load_csv(misc_path)
-    ht   = load_csv(ht_path)
-    hca  = load_csv(hca_path)
+    ht = load_csv(ht_path)
+    hca = load_csv(hca_path)
 
     # Validate Season
-    for name, df in [("index",idx),("offense",off),("defense",dfm),
-                     ("misc",misc),("height",ht)]:
+    for name, df in [
+        ("index", idx),
+        ("offense", off),
+        ("defense", dfm),
+        ("misc", misc),
+        ("height", ht),
+    ]:
         if "Season" not in df.columns:
             raise ValueError(f"❌ Missing Season column in {name}")
 
     # Merge KP components
     df = (
-        idx.merge(off,  on=["Season","Team"], how="left")
-           .merge(dfm,  on=["Season","Team"], how="left")
-           .merge(misc, on=["Season","Team"], how="left")
-           .merge(ht,   on=["Season","Team"], how="left")
+        idx.merge(off, on=["Season", "Team"], how="left")
+        .merge(dfm, on=["Season", "Team"], how="left")
+        .merge(misc, on=["Season", "Team"], how="left")
+        .merge(ht, on=["Season", "Team"], how="left")
     )
 
     # Latest season only
@@ -104,13 +107,13 @@ def load_kenpom(folder: Path) -> pd.DataFrame:
     hca["Team_norm"] = hca["Team"].apply(normalize_team)
 
     # Merge HCA
-    df = df.merge(hca[["Team_norm","HomeCourtAdv"]], on="Team_norm", how="left")
+    df = df.merge(hca[["Team_norm", "HomeCourtAdv"]], on="Team_norm", how="left")
 
     # Clean HCA
     df["HomeCourtAdv"] = pd.to_numeric(df["HomeCourtAdv"], errors="coerce")
     df["HomeCourtAdv"].fillna(df["HomeCourtAdv"].mean(), inplace=True)
 
-    essential = ["Team","AdjOE","AdjDE","AdjEM","AdjTempo","HomeCourtAdv"]
+    essential = ["Team", "AdjOE", "AdjDE", "AdjEM", "AdjTempo", "HomeCourtAdv"]
     for col in essential:
         if col not in df.columns:
             raise ValueError(f"❌ Missing KP column: {col}")
@@ -119,7 +122,7 @@ def load_kenpom(folder: Path) -> pd.DataFrame:
 
     out = Path("data/processed/kenpom")
     out.mkdir(parents=True, exist_ok=True)
-    clean.to_csv(out/"kenpom_master.csv", index=False)
+    clean.to_csv(out / "kenpom_master.csv", index=False)
 
     print("💾 Saved → data/processed/kenpom/kenpom_master.csv")
     print(">>> load_kenpom FINISHED\n")
