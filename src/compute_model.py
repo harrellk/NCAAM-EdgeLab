@@ -1,6 +1,24 @@
 import numpy as np
 
 
+def hca_taper(em_gap):
+    """
+    Option A HCA taper:
+    - Full HCA when teams are similar
+    - Fade HCA as mismatch grows
+    """
+    taper = np.ones_like(em_gap)
+
+    # Fade zone: 6 → 16 EM gap
+    mask = (em_gap > 6) & (em_gap < 16)
+    taper[mask] = 1.0 - ((em_gap[mask] - 6) / 10) * 0.5
+
+    # Floor at 50%
+    taper[em_gap >= 16] = 0.50
+
+    return taper
+
+
 def compute_model(df, default_hca=3.4):
     """
     Hybrid scoring model:
@@ -9,15 +27,23 @@ def compute_model(df, default_hca=3.4):
     """
 
     # ---------------------------------------------------------
-    # 1) Home Court Advantage (team-specific, scaled)
+    # 1) Home Court Advantage (team-specific, tapered)
     # ---------------------------------------------------------
     HCA_raw = df.get("HomeCourtAdv_A", default_hca).fillna(default_hca)
 
-    # NEW: Zero out HCA for neutral-site games
+    # Base scaling (existing behavior)
+    HCA_base = HCA_raw * 1.1
+
+    # Neutral-site zero-out
     if "IsNeutral" in df.columns:
-        HCA = np.where(df["IsNeutral"], 0, HCA_raw * 1.1)
-    else:
-        HCA = HCA_raw * 1.1
+        HCA_base = np.where(df["IsNeutral"], 0, HCA_base)
+
+    # Apply Option A taper
+    EM_gap = (df["AdjEM_A"] - df["AdjEM_B"]).abs()
+    taper = hca_taper(EM_gap)
+
+    HCA = HCA_base * taper
+    df["EffectiveHCA"] = HCA.round(2)
 
     # ---------------------------------------------------------
     # 2) Possession Model (harmonic mean tempo)
